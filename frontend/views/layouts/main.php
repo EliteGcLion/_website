@@ -35,7 +35,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => '首页', 'url' => ['/blog/index/index']],
+        ['label' => '首页', 'url' => ['/']],
         ['label' => 'IT技术笔记', 'url' => ['/blog/index/about']],
         ['label' => '源码分享', 'url' => ['/blog/index/contact']],
     ];

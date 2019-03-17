@@ -11,36 +11,6 @@ $config = [
     'defaultRoute'=>'blog/index/index',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-        'assetManager' => [
-            'bundles' => [
-                'yii\web\JqueryAsset' => [
-                    'js' => [],  // 去除 jquery.js
-                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
-                ],
-                'yii\web\YiiAsset' => [
-                    'js' => [],  // 去除 yii.js
-                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
-                ],
-
-                'yii\widgets\ActiveFormAsset' => [
-                    'js' => [],  // 去除 yii.activeForm.js
-                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
-                ],
-
-                'yii\validators\ValidationAsset' => [
-                    'js' => [],  // 去除 yii.validation.js
-                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
-                ],
-                'yii\bootstrap\BootstrapAsset' => [
-                    'css' => [],  // 去除 bootstrap.css
-                    'sourcePath' => null, // 防止在 frontend/web/asset 下生产文件
-                ],
-                'yii\bootstrap\BootstrapPluginAsset' => [
-                    'js' => [],  // 去除 bootstrap.js
-                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
-                ],
-            ],
-        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
             'cookieValidationKey' => 'mhn9YQaYmwzIeG8jjeJANraNWHIBQOjO',
@@ -70,14 +40,14 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<module:\w+>/<controller:\w+>/<id:\d+>' => '<module>/<controller>/view',
+                'detail/<id:\d+>' => 'blog/index/detail',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ],
         ],
 
     ],
     'params' => $params,
-    'modules' => require __DIR__.'./modules.php',
+    'modules' => require __DIR__.'/modules.php',
 ];
 
 

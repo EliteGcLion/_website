@@ -6,6 +6,36 @@ return [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'js' => [],  // 去除 jquery.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+                'yii\web\YiiAsset' => [
+                    'js' => [],  // 去除 yii.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+
+                'yii\widgets\ActiveFormAsset' => [
+                    'js' => [],  // 去除 yii.activeForm.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+
+                'yii\validators\ValidationAsset' => [
+                    'js' => [],  // 去除 yii.validation.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [],  // 去除 bootstrap.css
+                    'sourcePath' => null, // 防止在 frontend/web/asset 下生产文件
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js' => [],  // 去除 bootstrap.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+            ],
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

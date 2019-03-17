@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Url;
-
+$this->title = '首页';
 ?>
 <div class="content-wrap">
     <div class="content">
@@ -11,7 +11,7 @@ use yii\helpers\Url;
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <a href="#" target="_blank" title="木庄网络博客源码">
+                    <a href="/" target="_blank" title="木庄网络博客源码">
                         <img src="<?=Url::to('/static/images/201610181557196870.jpg')?>" alt="木庄网络博客源码" class="img-responsive"></a>
                 </div>
                 <div class="item">
@@ -42,14 +42,14 @@ use yii\helpers\Url;
             </div>
         </div>
         <article class="excerpt excerpt-1" style="">
-            <a class="focus" href="/blog/index/detail" title="用DTcms做一个独立博客网站（响应式模板）" target="_blank">
+            <a class="focus" href="<?=Url::to('detail/1')?>" title="用DTcms做一个独立博客网站（响应式模板）" target="_blank">
                 <img class="thumb" src="<?=Url::to('/static/images/201610181739277776.jpg')?>" style="display: inline;">
             </a>
 
             <header>
-                <a class="cat" href="#" title="MZ-NetBlog主题">MZ-NetBlog主题<i></i></a>
+                <a class="cat" href="<?=Url::to('detail/1')?>" title="MZ-NetBlog主题">MZ-NetBlog主题<i></i></a>
                 <h2>
-                    <a href="#" title="用DTcms做一个独立博客网站（响应式模板）" target="_blank">用DTcms做一个独立博客网站（响应式模板）</a>
+                    <a href="<?=Url::to('detail/1')?>" title="用DTcms做一个独立博客网站（响应式模板）" target="_blank">用DTcms做一个独立博客网站（响应式模板）</a>
                 </h2>
             </header>
             <p class="meta">
@@ -61,10 +61,6 @@ use yii\helpers\Url;
             </p>
             <p class="note">用DTcms做一个独立博客网站（响应式模板），采用DTcms V4.0正式版（MSSQL）。开发环境：SQL2008R2+VS2010。DTcV4.0正式版功能修复和优化：1、favicon.ico图标后台上传。（解决要换图标时要连FTP或者开服务器的麻烦）</p>
         </article>
-
-
-
-
 
         <nav class="pagination" style="display: none;">
             <ul>
